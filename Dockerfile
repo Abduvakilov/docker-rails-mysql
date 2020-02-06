@@ -1,10 +1,8 @@
-FROM ruby:2.3.0
+FROM ruby:2.7
 ENV LANG C.UTF-8
 
 RUN apt-get update && \
-    apt-get install -y nodejs \
-                       vim \
-                       mysql-client \
+    apt-get install -y default-mysql-client \
                        --no-install-recommends && \
     rm -rf /var/lib/apt/lists/*
 
